@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class d069 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan=new Scanner(System.in);
+		while(scan.hasNext()){
+			int num=scan.nextInt();
+			int[] y=new int[num];
+			for(int i=0;i<num;i++){
+				y[i]=scan.nextInt();
+			}
+			for(int val:y){
+				if((val%400)==0){
+					System.out.println("a leap year");
+				}
+				else{
+					if((val%100)==0){
+						System.out.println("a normal year");
+					}
+					else{
+						if((val%4)==0){
+							System.out.println("a leap year");
+						}
+						else{
+							System.out.println("a normal year");
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
