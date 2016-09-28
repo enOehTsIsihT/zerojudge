@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class a059 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan=new Scanner(System.in);
+		int num =0;
+		while(scan.hasNext()){
+		num=scan.nextInt();
+		int totoal=0;
+		int[] set=new int[num*2];
+		for(int i=0;i<num*2;i++){
+				set[i]=scan.nextInt();
+		}
+	for(int i=0;i<num;i++){
+		totoal=0;
+		for(int j=set[2*i];j<=set[2*i+1];j++){
+			
+			if(Math.pow((int)Math.sqrt(j),2)==j){
+				totoal+=j;
+			}
+			else{
+				
+			}
+			
+		}
+		System.out.printf("Case %d: %d%n",i+1,totoal);
+	}
+	}
+	}
+}
