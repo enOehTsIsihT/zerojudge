@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class a005 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan=new Scanner(System.in);
+		
+		while(scan.hasNext()){
+			int num=scan.nextInt();
+			for(int i=0;i<num;i++){
+				int[] ary=new int[4];
+				for(int j=0;j<4;j++){
+					ary[j]=scan.nextInt();	
+				}
+				if(ary[3]/ary[2]==ary[2]/ary[1]&&ary[2]/ary[1]==ary[1]/ary[0]){
+					for(int val:ary){
+						System.out.printf("%d ",val);
+						}
+					System.out.printf("%d%n",ary[3]*ary[3]/ary[2]);
+				}
+				else{
+					for(int val:ary){
+						System.out.printf("%d ",val);
+					}
+					System.out.printf("%d%n",ary[3]+ary[3]-ary[2]);
+				}
+				
+			}
+		}
+		
+		
+	}
+	
+}
