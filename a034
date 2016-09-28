@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class a034 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan=new Scanner(System.in);
+		while(scan.hasNext()){
+		int num=scan.nextInt();
+		ArrayList ary=new ArrayList();
+		while(num>0){
+		int	result=num%2;
+		ary.add(result);
+		num=(int)num/2;
+		}
+		while(ary.size()>0){
+			System.out.print(ary.remove((ary.size()-1)));
+		
+		}
+		System.out.println();
+	}
+	}
+}
