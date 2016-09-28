@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class a244 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan=new Scanner(System.in);
+		int a=0;
+		while(scan.hasNext()){
+			 a=scan.nextInt();
+			for(int i=0;i<a;i++){
+				long b=scan.nextInt();
+				long c=scan.nextInt();
+				long d=scan.nextInt();
+				if(b==1){
+					System.out.println(c+d);
+				}
+				else{
+					if(b==2){
+						System.out.println(c-d);
+					}
+					else{
+						if(b==3){
+							System.out.println(c*d);
+						}
+						else{
+							System.out.println((long)(c/d));
+						}
+					}
+				}
+			}
+		
+		}
+		
+	}
+
+}
