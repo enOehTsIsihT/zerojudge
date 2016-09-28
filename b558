@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class b558 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan=new Scanner(System.in);
+		int a=0;
+		while(scan.hasNext()){
+			 a=scan.nextInt();
+			 long temp;
+			 long result=1;
+			for(int i=0;i<a;i++){
+				
+				temp=result+i;
+				result=temp;
+			}
+			System.out.println(result);
+			result=1;
+		}
+		
+	}
+
+}
