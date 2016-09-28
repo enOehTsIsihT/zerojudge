@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class a215 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan=new Scanner(System.in);
+		
+		while(scan.hasNext()){
+			int a=scan.nextInt();
+			int b=scan.nextInt();
+			
+			int result=0;
+			int count=0;
+			do{
+				result+=(a++);
+				count++;
+			}while(result<=b);
+			System.out.printf("%d%n",count);
+		}
+	}
+
+}
