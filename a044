@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class a044 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan=new Scanner(System.in);
+		
+		while(scan.hasNext()){
+			int n=scan.nextInt();
+			System.out.printf("%d%n",(n+1)*(n*n-n+6)/6);
+		}
+	}
+	
+}
