@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class a003 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan=new Scanner(System.in);
+		
+		while(scan.hasNext()){
+			
+			
+			
+			int a=scan.nextInt();
+			int b=scan.nextInt();
+			switch(((2*a)+b)%3){
+			case 0:
+				System.out.println("普通");
+				break;
+			case 1:
+				System.out.println("吉");
+				break;
+			default:
+				System.out.println("大吉");
+				break;
+			}
+		}
+	}
+
+}
