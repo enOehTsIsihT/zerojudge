@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class a149 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan=new Scanner(System.in);
+		
+		while(scan.hasNext()){
+			int num=scan.nextInt();
+			int[] ary=new int[num];
+			for(int i=0;i<ary.length;i++){
+				ary[i]=scan.nextInt();
+			}
+			for(int i=0;i<ary.length;i++){
+				int result=1;
+				while((int)ary[i]/10>=1){
+					result*=(ary[i]%10);
+					ary[i]=(int)(ary[i]/10);
+				}
+				System.out.printf("%d%n",ary[i]*result);
+			}
+		}
+	}
+
+}
