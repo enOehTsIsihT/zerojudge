@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class a104 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan=new Scanner(System.in);
+		int num =0;
+		int[] ary=new int[1];
+		while(scan.hasNext()){
+		num=scan.nextInt();
+		int[] temp=new int[num];
+		for(int i=0;i<num;i++){
+			temp[i]=scan.nextInt();
+		ary=temp;}
+	sort(ary);
+		}
+		
+		
+	}
+	public static void sort(int[] aAry){
+			int[] result=new int[aAry.length];
+		for(int block=1;block<2*aAry.length;block*=2){
+			for(int start=0;start<aAry.length;start+=(2*block)){
+				
+				int low=start;
+				int mid=(start+block)<aAry.length?(start+block):aAry.length;
+				int high=(start+2*block)<aAry.length?(start+2*block):aAry.length;
+				int str1=low,end1=mid,str2=mid,end2=high;
+				while(str1<end1&&str2<end2){
+					result[low++]=aAry[str1]<aAry[str2]?aAry[str1++]:aAry[str2++];
+				}
+				while(str1<end1){
+					result[low++]=aAry[str1++];
+				}
+				while(str2<end2){
+					result[low++]=aAry[str2++];
+					
+				}
+				
+			}
+			int[] temp=result;
+			result=aAry;
+			aAry=temp;
+		}
+		for(int i=0;i<aAry.length;i++){
+			System.out.printf("%d%c",aAry[i],i==aAry.length-1?'\n':' ');
+		}
+	}
+}
