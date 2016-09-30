@@ -1,0 +1,50 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class a040 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<String> result=new ArrayList<String>();
+		Scanner scan=new Scanner(System.in);
+		while(scan.hasNext()){
+			int start=scan.nextInt();
+			int end=scan.nextInt();
+			for(int i=start;i<=end;i++){
+				int temp1=i;
+				int size=1;
+				while((int)(temp1/10)!=0){
+					temp1=(int)(temp1/10);
+					size++;
+				}
+				int[] num=new int[size];
+				int temp2=i;;
+				for(int j=size-1;j>=0;j--){
+					num[j]=temp2%10;
+					temp2=(int)temp2/10;
+				}
+				int sum=0;
+				for(int k=0;k<num.length;k++){
+					sum+=Math.pow(num[k],size);
+				}
+				if(sum==i){
+					Integer in=i;
+					result.add(in.toString());
+				}
+			}
+			if(result.isEmpty()){
+				result.add("none");
+			}
+			while(result.isEmpty()!=true){
+				System.out.print(result.remove(0));
+				if(result.isEmpty()!=true){
+					System.out.print(" ");
+				}
+				else{
+					System.out.println();
+				}
+			}
+		}
+	}
+
+}
