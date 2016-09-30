@@ -1,0 +1,43 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class a054 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] checknumber={10,11,12,13,14,15,16,17,34,18,19,20,21,22,35,23,24,25,26,27,28,29,32,30,31,33};
+		ArrayList<Integer> result=new ArrayList<Integer>();
+		Scanner scan=new Scanner(System.in);
+		
+		while(scan.hasNext()){
+			int temp=0;
+			StringBuffer str=new StringBuffer(scan.nextLine());
+			ArrayList<Character> arr=new ArrayList<Character>();
+			for(int i=0;i<str.length();i++){
+				arr.add(str.charAt(i));
+			}
+			int len=arr.size();
+			for(int i=0;i<len-1;i++){
+				if(i!=(len-2)){
+					temp+=Character.getNumericValue(arr.remove(0))*(8-i);
+				}
+				else{
+					temp+=Character.getNumericValue(arr.remove(0))*(8-i);
+					temp+=Character.getNumericValue(arr.remove(0))*(8-i);
+				}
+			}
+			for(int i=0;i<checknumber.length;i++){
+
+				if((temp+(checknumber[i]%10)*9+(int)(checknumber[i]/10))%10==0){
+					
+					result.add(i);
+				}
+			}
+			while(result.isEmpty()!=true){
+				System.out.print((char)(result.remove(0)+65));
+			}
+			System.out.println();
+			}
+	}
+
+}
