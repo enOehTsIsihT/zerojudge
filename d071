@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class d071 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan=new Scanner(System.in);
+		ArrayList<Integer> arr=new ArrayList<Integer>();
+		while(scan.hasNextLine()){
+			arr.add(Integer.parseInt(scan.nextLine()));
+			
+		}
+		while(arr.isEmpty()!=true){
+			int year=arr.remove(0);
+			if(year%400==0){
+				System.out.println("a leap year");
+			}
+			else{
+				if(year%100==0){
+					System.out.println("a normal year");
+				}
+				else{
+					if(year%4==0){
+						System.out.println("a leap year");
+					}
+					else{
+						System.out.println("a normal year");
+					}
+				}
+			}
+		}
+	}
+
+}
