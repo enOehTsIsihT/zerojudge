@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class d050 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan=new Scanner(System.in);
+		while(scan.hasNext()){
+			int hourTw=scan.nextInt();
+			System.out.println((hourTw+9)%24);
+		}
+	}
+
+}
