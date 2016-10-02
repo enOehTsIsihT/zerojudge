@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class d127 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan=new Scanner(System.in);
+		while(scan.hasNext()){
+			long max=0;
+			long cycLen=scan.nextInt();
+			for(long i=0;i<=(cycLen/2);i++){
+				if(i*((cycLen/2)-i)>=max){
+					max=i*((cycLen/2)-i);
+				}
+				else{
+					
+				}
+			}
+			System.out.println(max);
+		}
+	}
+
+}
