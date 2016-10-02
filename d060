@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class d060 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan=new Scanner(System.in);
+		while(scan.hasNext()){
+			int minute=scan.nextInt();
+			if(minute>25){
+				System.out.println(85-minute);
+			}
+			else{
+				System.out.println(25-minute);
+			}
+		}
+	}
+
+}
