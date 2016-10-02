@@ -1,0 +1,21 @@
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class b523 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan=new Scanner(System.in);
+		HashSet<String> hs=new HashSet<String>();
+		while(scan.hasNext()){
+			String str=scan.nextLine();
+			if(hs.add(str)){
+				System.out.println("NO");
+			}
+			else{
+				System.out.println("YES");
+			}
+		}
+	}
+
+}
