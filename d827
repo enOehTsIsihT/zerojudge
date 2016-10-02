@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class d827 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan=new Scanner(System.in);
+		while(scan.hasNext()){
+			int studentNum=scan.nextInt();
+			int money=((int)(studentNum/12)*50)+((studentNum%12)*5);
+			System.out.println(money);
+			
+		}
+	}
+
+}
