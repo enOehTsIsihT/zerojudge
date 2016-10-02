@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class d049 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan=new Scanner(System.in);
+		while(scan.hasNext()){
+			int ceYear=scan.nextInt();
+			System.out.println(ceYear-1911);
+		}
+	}
+
+}
