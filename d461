@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class d461 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan=new Scanner(System.in);
+		while(scan.hasNext()){
+			int num=scan.nextInt();
+			int sum=0;
+			while((int)(num/2)>0){
+				sum+=(int)(num/2);
+				if(num%2==0){
+					num=(int)(num/2);
+				}
+				else{
+					num=(int)(num/2)+1;
+				}
+				
+			}
+			System.out.println(sum);
+		}
+	}
+
+}
