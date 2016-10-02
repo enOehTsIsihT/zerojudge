@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class d491 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		while (scan.hasNext()) {
+			int start = scan.nextInt();
+			int end = scan.nextInt();
+			int sum = 0;
+			if (start > end) {
+				int temp = start;
+				start = end;
+				end = temp;
+			} else {
+
+			}
+			for (int i = start; i <= end; i++) {
+				if (i % 2 == 0) {
+					sum += i;
+				} else {
+
+				}
+			}
+			System.out.println(sum);
+		}
+	}
+
+}
