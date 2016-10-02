@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class a273 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		while (scan.hasNext()) {
+			int total = scan.nextInt();
+			int decrement = scan.nextInt();
+			if (total == 0) {
+				System.out.println("Ok!");
+			} else {
+				if (decrement == 0) {
+					System.out.println("Impossib1e!");
+				} else {
+					if ((total % decrement) == 0) {
+						System.out.println("Ok!");
+					} else {
+						System.out.println("Impossib1e!");
+					}
+				}
+			}
+
+		}
+	}
+
+}
